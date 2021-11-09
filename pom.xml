@@ -7,6 +7,17 @@
 	<artifactId>lifegame</artifactId>
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
+	
+	    <skipTests>false</skipTests>
+            <!--Jacoco settings -->
+            <jacoco.haltOnFailure>false</jacoco.haltOnFailure>
+            <jacoco.skip>false</jacoco.skip>
+
+            <!-- sonar JACOCO properties -->
+            <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
+            <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
+            <sonar.jacoco.reportPaths>${project.reporting.outputDirectory}/jacoco-ut.exec</sonar.jacoco.reportPaths>
+            <sonar.language>java</sonar.language>
 
 	<name>LifeGame</name>
 	<description>Game of Life weird implementation</description>
