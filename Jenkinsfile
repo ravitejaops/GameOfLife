@@ -21,8 +21,8 @@ node() {
                    -Dsonar.language=java \
                    -Dsonar.java.binaries=target/classes \
                    -Dsonar.tests=src/test \
-                   -Dsonar.junit.reportsPath=target/surefire-reports \
-                   -Dsonar.surefire.reportsPath=target/surefire-reports \
+                   -Dsonar.junit.reportPaths=target/surefire-reports \
+                   -Dsonar.surefire.reportPaths=target/surefire-reports \
                    -Dsonar.jacoco.reportPaths=target/jacoco.exec \
                    -Dsonar.binaries=target/classes \
                    -Dsonar.verbose=true'
