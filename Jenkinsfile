@@ -23,9 +23,9 @@ node() {
                    -Dsonar.tests=src/test/ \
                    -Dsonar.junit.reportsPath=target/surefire-reports \
                    -Dsonar.surefire.reportsPath=target/surefire-reports \
-                   -Dsonar.jacoco.reportPaths=target/jacoco.exec \
+                   -Dsonar.jacoco.reportPaths=target/jacoco-ut.exec \
                    -Dsonar.binaries=target/classes \
-                   -Dsonar.java.coveragePlugin=jacoco \
+//                   -Dsonar.java.coveragePlugin=jacoco \
                    -Dsonar.verbose=true'
                 }
         }
