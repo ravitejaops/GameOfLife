@@ -16,15 +16,14 @@ node() {
                    -Dsonar.host.url=http://35.179.15.141:9090/sonar \
                    -Dsonar.login=ce0b3326ec9b422e353b9a9e5aee71e41f5c1c50 \
                    -Dsonar.projectVersion=1.0.0 \
-                   -Dsonar.sources=src/main \
+                   -Dsonar.sources=src/main/java/ \
                    -Dsonar.sourceEncoding=UTF-8 \
                    -Dsonar.language=java \
-                   -Dsonar.java.binaries=target/classes \
+                   -Dsonar.java.binaries=target/classes/ \
                    -Dsonar.tests=src/test \
-                   -Dsonar.junit.reportPaths=target/surefire-reports \
-                   -Dsonar.surefire.reportPaths=target/surefire-reports \
+                   -Dsonar.junit.reportPaths=target/surefire-reports/ \
+                   -Dsonar.surefire.reportPaths=target/surefire-reports/ \
                    -Dsonar.jacoco.reportPaths=target/jacoco.exec \
-                   -Dsonar.binaries=target/classes \
                    -Dsonar.verbose=true'
                 }
         }
