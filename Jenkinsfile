@@ -23,7 +23,7 @@ node() {
                    -Dsonar.tests=src/test/ \
                    -Dsonar.junit.reportsPath=target/surefire-reports \
                    -Dsonar.surefire.reportsPath=target/surefire-reports \
-                   -Dsonar.jacoco.reportPaths=target/jacoco-ut.exec \
+                   -Dsonar.jacoco.reportPaths=target/jacoco.exec \
                    -Dsonar.binaries=target/classes \
                    -Dsonar.verbose=true'
                 }
