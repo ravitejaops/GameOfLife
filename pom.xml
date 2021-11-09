@@ -8,16 +8,13 @@
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
 	
-	    <skipTests>false</skipTests>
-            <!--Jacoco settings -->
-            <jacoco.haltOnFailure>false</jacoco.haltOnFailure>
-            <jacoco.skip>false</jacoco.skip>
-
-            <!-- sonar JACOCO properties -->
-            <sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
-            <sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-            <sonar.jacoco.reportPaths>${project.reporting.outputDirectory}/jacoco-ut.exec</sonar.jacoco.reportPaths>
-            <sonar.language>java</sonar.language>
+	<properties>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	    <java.version>1.8</java.version>
+	    <jacoco.version>0.8.5</jacoco.version>
+	    <sonar.jacoco.reportPath>target/jacoco-ut.exec</sonar.jacoco.reportPath>
+	    <sonar.jacoco.itReportPaths>target/jacoco-it.exec</sonar.jacoco.itReportPaths>
+	</properties>
 
 	<name>LifeGame</name>
 	<description>Game of Life weird implementation</description>
@@ -35,18 +32,6 @@
 	</properties>
 
 	<dependencies>
-		 <dependency>
-		    <groupId>org.jacoco</groupId>
-		    <artifactId>org.jacoco.agent</artifactId>
-		    <version>0.8.1</version>
-		    <classifier>runtime</classifier>
-		</dependency>
-		<dependency>
-		  <groupId>org.codehaus.sonar-plugins.java</groupId>
-		  <artifactId>sonar-jacoco-listeners</artifactId>
-		  <version>1.2</version>
-		  <scope>test</scope>
-		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -77,38 +62,6 @@
 	
 	<build>
 		<plugins> 
-			<!-- Added for Jacoco -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.12.4</version>
-                <configuration>
-                  <properties>
-                    <property>
-                      <name>listener</name>
-                      <value>org.sonar.java.jacoco.JUnitListener</value>
-                    </property>
-                  </properties>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.jacoco</groupId>
-                <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.1</version>
-                <configuration>
-                    <destFile>${sonar.jacoco.reportPaths}</destFile>
-                    <append>true</append>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>agent</id>
-                        <goals>
-                          <goal>prepare-agent</goal>
-                        </goals>
-                      </execution>
-                </executions>
-            </plugin>
 			
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
